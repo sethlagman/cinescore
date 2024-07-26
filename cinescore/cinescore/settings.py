@@ -1,3 +1,5 @@
+from fake_useragent import UserAgent
+
 # Scrapy settings for cinescore project
 #
 # For simplicity, this file contains only settings considered important or
@@ -14,7 +16,8 @@ NEWSPIDER_MODULE = "cinescore.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "cinescore (+http://www.yourdomain.com)"
+ua = UserAgent()
+USER_AGENT = ua.random()
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
